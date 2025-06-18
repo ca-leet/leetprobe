@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+*.log
+*.db
+*.sqlite3
+dns_records.csv
+live_urls.txt
