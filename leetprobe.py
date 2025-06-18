@@ -10,6 +10,7 @@ async def probe(session, sem, domain, port, results):
         url = f"{proto}://{domain}:{port}"
         try:
             async with sem, session.get(url, timeout=5, allow_redirects=True, ssl=False) as resp:
+                print(f"[+] Live: {url}")
                 results.append(url)
                 break  # Stop after first successful response
         except:
